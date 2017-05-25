@@ -14,7 +14,7 @@ class App extends Component {
 			<MuiThemeProvider>
 				<div className="App">
 					<TopNavBar />
-					<div className="container">
+					<div className="app-wrapper container">
 						<ChartCard chartTitle="Neuron Pulse"
 						           chartSubTitle="A super duper nice chart !"
 									chartText="Loreum Ipsum dolor sit emmet."

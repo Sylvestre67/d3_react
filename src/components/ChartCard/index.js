@@ -14,9 +14,12 @@ class ChartCard extends Component {
 	}
 
 	componentDidMount(){
-		let chartElement = document.querySelector('#chart-wrapper');
 		let chart = this.chartSelector.getChart(this.props.chartName);
-		chart.draw(this.props.chartConfig, chartElement, this.props.chartData);
+		chart.draw(this.props.chartConfig, this.chartElement, this.props.chartData);
+
+		setInterval(() => {
+			chart.draw(this.props.chartConfig, this.chartElement, this.props.chartData);
+		},2000)
 	}
 
 	render() {
@@ -27,7 +30,7 @@ class ChartCard extends Component {
 			/>
 			<CardMedia
 				mediaStyle={{'height':'300px','position':'relative'}}
-				children={<div id="chart-wrapper"></div>}>
+				children={<div ref={(div) => { this.chartElement = div; }} id="chart-wrapper"></div>}>
 			</CardMedia>
 			<CardText>
 				{ this.props.chartText }

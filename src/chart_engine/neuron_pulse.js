@@ -39,7 +39,7 @@ class NeuronalPulse{
 		let g = svg.append('g')
 			.attr('transform', 'translate(' + margins['left'] + ',' + margins['top'] + ')');
 
-		let path = g.append('path')
+		g.append('path')
 			.datum(data)
 			.attr('fill', 'none')
 			.attr('stroke', 'steelblue')
