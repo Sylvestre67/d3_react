@@ -1,0 +1,53 @@
+@keyframes fade {
+  from {
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+  }
+  to {
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade {
+  from {
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+  }
+  to {
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+  }
+}
+@-o-keyframes fade {
+  from {
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+  }
+  to {
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+  }
+}
+@-ms-keyframes fade {
+  from {
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+  }
+  to {
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+  }
+}
+.blink {
+  -webkit-animation: fade 500ms ease 300ms infinite;
+  -moz-animation: fade 500ms ease 300ms infinite;
+  animation: fade 500ms ease 300ms infinite;
+}
