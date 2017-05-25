@@ -18,7 +18,7 @@ class ChartCard extends Component {
 		chart.draw(this.props.chartConfig, this.chartElement, this.props.chartData);
 
 		setInterval(() => {
-			chart.draw(this.props.chartConfig, this.chartElement, this.props.chartData);
+			//chart.draw(this.props.chartConfig, this.chartElement, this.props.chartData);
 		},2000)
 	}
 

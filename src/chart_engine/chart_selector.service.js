@@ -1,4 +1,5 @@
-import NeuronPulse from'./neuron_pulse';
+import NeuronPulse from './neuron_pulse';
+import LineChart   from './line_chart';
 
 class ChartSelectorService {
 
@@ -8,9 +9,12 @@ class ChartSelectorService {
 			case "neuronPulse":
 				chart = new NeuronPulse();
 				return chart;
+			case "lineChart":
+				chart = new LineChart();
+				return chart;
 			default:
 				chart = null;
-				console.error('Chart not found. Please adjust the name of the chart.');
+				throw('Chart not found. Please adjust the name of the chart.');
 				return chart
 		}
 	}

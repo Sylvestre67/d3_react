@@ -1,0 +1,62 @@
+$marina:#428bca;
+$axis-text-color:#3d454c;
+$axis-line-color:lighten($axis-text-color,50%);
+$gray-lighter: #eeeeee;
+
+svg{
+  &.line-svg{
+    &:nth-child(2){
+      & g{
+        & g{
+          &.bar{
+            fill:$marina;
+            &:nth-child(11){
+              display:none;
+            }
+          }
+          & .bar-label{
+            font-size:12px;
+            text-anchor: middle;
+            fill:$axis-text-color;
+          }
+        }
+      }
+    }
+
+    & .data-line{
+      stroke:$axis-line-color;
+    }
+
+    & .data-points{
+      & circle{
+        fill:darken($marina,20%);
+        &.null{
+          fill:$gray-lighter;
+        }
+      }
+      & .point-label{
+        font-size:12px;
+        text-anchor: middle;
+        fill:$axis-text-color;
+      }
+    }
+
+    & .axis{
+      & path{
+        stroke:$axis-line-color;
+      }
+      & .tick{
+        & line{
+          stroke:$axis-line-color;
+        }
+        & text{
+          fill:$axis-text-color;
+        }
+      }
+      & .axis-label{
+        fill:$axis-text-color;
+        font-weight:600;
+      }
+    }
+  }
+}

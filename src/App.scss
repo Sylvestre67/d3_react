@@ -1,5 +1,8 @@
 .App {
   & .app-wrapper{
     margin-bottom:2em;
+    & .row{
+      margin-bottom:1em;
+    }
   }
 }
